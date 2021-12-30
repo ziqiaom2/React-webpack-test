@@ -12,7 +12,5 @@ import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 
 
-import allReducer from './reducers'
-
 //暴露store
 export default createStore(allReducer,composeWithDevTools(applyMiddleware(thunk)))

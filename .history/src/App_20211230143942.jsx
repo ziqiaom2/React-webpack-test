@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-
+import store from './redux/store'
 import Header from './components/Header'
 import List from './components/List'
 import Footer from './components/Footer'
 import Count from './containers/Count'
-import Person from './containers/Person'
 import './App.css'
 
 export default class App extends Component {
@@ -85,7 +84,6 @@ export default class App extends Component {
 					<List todos={todos} updateTodo={this.updateTodo} deleteTodo={this.deleteTodo}/>
 					<Footer todos={todos} checkAllTodo={this.checkAllTodo} clearAllDone={this.clearAllDone}/>
 					<Count/>
-					<Person/>
 				</div>
 			</div>
 		)

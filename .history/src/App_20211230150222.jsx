@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import store from './redux/store'
 import Header from './components/Header'
 import List from './components/List'
 import Footer from './components/Footer'

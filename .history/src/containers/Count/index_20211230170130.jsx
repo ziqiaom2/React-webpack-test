@@ -41,24 +41,24 @@ class Count extends Component {
   //加法
   increment = () => {
     const { value } = this.selectNumber;
-    this.props.increment(value * 1);
+    this.props.addValue(value * 1);
   };
   //减法
   decrement = () => {
     const { value } = this.selectNumber;
-    this.props.decrement(value * 1);
+    this.props.deletValue(value * 1);
   };
   //奇数再加
   incrementIfOdd = () => {
     const { value } = this.selectNumber;
     if (this.props.count % 2 !== 0) {
-      this.props.increment(value * 1);
+      this.props.addValue(value * 1);
     }
   };
   //异步加
   incrementAsync = () => {
     const { value } = this.selectNumber;
-    this.props.incrementAsync(value * 1, 500);
+    this.props.addValueAsync(value * 1, 500);
   };
 
   render() {
@@ -86,7 +86,7 @@ class Count extends Component {
 export default connect(
 	//因为reducer暴露时候是合并整体暴露，那么容器组件在取状态的时候也要注意按层级取出来
 	(state) => ({ count: state.count,sumPersons:state.person.length }), {
-  increment,
-  decrement,
-  incrementAsync,
+  addValue: increment,
+  deletValue: decrement,
+  addValueAsync: incrementAsync,
 })(Count);
