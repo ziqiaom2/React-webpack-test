@@ -9,12 +9,12 @@ export default class App extends Component {
 	//状态在哪里，操作状态的方法就在哪里
 
 	//初始化状态
-	state = {todos:[
-		{id:'001',name:'Vue',done:false},
-		{id:'002',name:'React',done:false},
-		{id:'003',name:'Angular',done:true},
-		{id:'004',name:'Taro',done:false}
-	]}
+	// state = {todos:[
+	// 	{id:'001',name:'Vue',done:false},
+	// 	{id:'002',name:'React',done:false},
+	// 	{id:'003',name:'Angular',done:true},
+	// 	{id:'004',name:'Taro',done:false}
+	// ]}
 
 	//addTodo用于添加一个todo，接收的参数是todo对象
 	addTodo = (todoObj)=>{
