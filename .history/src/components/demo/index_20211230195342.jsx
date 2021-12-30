@@ -8,7 +8,6 @@ import Loading from "../Loading";
 import { NavLink, Route } from "react-router-dom";
 const Count = lazy(() => import("../../containers/Count"));
 const Person = lazy(() => import("../../containers/Person"));
-const Hooks = lazy(()=>import('../../components/Hooks'))
 export default class App extends Component {
   //状态在哪里，操作状态的方法就在哪里
 
@@ -100,13 +99,11 @@ export default class App extends Component {
           <div className="myLink">
             <NavLink to="/count">Count</NavLink>
             <NavLink to="/person">Person</NavLink>
-            <NavLink to="/hooks">Hooks</NavLink>
           </div>
           <div>
             <Suspense fallback={<Loading />}>
               <Route path="/count" component={Count} />
               <Route path="/person" component={Person} />
-							<Route path='/hooks' component={Hooks}/>
             </Suspense>
           </div>
         </div>
