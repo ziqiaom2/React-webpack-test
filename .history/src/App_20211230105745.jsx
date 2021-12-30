@@ -3,7 +3,7 @@ import store from './redux/store'
 import Header from './components/Header'
 import List from './components/List'
 import Footer from './components/Footer'
-import Count from './containers/Count'
+import Count from './components/Count'
 import './App.css'
 
 export default class App extends Component {
