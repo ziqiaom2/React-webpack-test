@@ -4,7 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 //引入App
 import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import App from "./components/demo";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 

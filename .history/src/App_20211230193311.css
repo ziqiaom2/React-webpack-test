@@ -42,5 +42,5 @@ body {
 }
 .myLink{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 5rem 1fr;
 }

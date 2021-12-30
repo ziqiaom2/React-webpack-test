@@ -41,6 +41,6 @@ body {
   border-radius: 5px;
 }
 .myLink{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  margin-left: 5rem;
 }
