@@ -11,8 +11,7 @@ export default class List extends Component {
     deleteTodo: PropTypes.func.isRequired,
   };
   state={hasError:''}
-  // 如果子组件出错，则进行容灾
-  // 只能捕获后代组件生命周期产生的错误，不能捕获自己组件产生的错误和其他组件在合成事件，定时器中产生的错误
+
   static getDerivedStateFromError(error) {
     console.log("error occurred:", error);
     return { hasError: error };

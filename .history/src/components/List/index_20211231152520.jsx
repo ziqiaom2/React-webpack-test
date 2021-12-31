@@ -11,8 +11,7 @@ export default class List extends Component {
     deleteTodo: PropTypes.func.isRequired,
   };
   state={hasError:''}
-  // 如果子组件出错，则进行容灾
-  // 只能捕获后代组件生命周期产生的错误，不能捕获自己组件产生的错误和其他组件在合成事件，定时器中产生的错误
+
   static getDerivedStateFromError(error) {
     console.log("error occurred:", error);
     return { hasError: error };
@@ -25,7 +24,7 @@ export default class List extends Component {
     const { todos, updateTodo, deleteTodo } = this.props;
     return (
       <ul className="todo-main">
-        {this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : todos.map((todo) => {
+        {todos.map((todo) => {
           return (
             <Item
               key={todo.id}
@@ -35,7 +34,6 @@ export default class List extends Component {
             />
           );
         })}
-        
       </ul>
     );
   }

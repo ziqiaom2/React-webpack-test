@@ -31,8 +31,7 @@ export default class Item extends Component {
 
 
 	render() {
-		// 可以通过注释下面行，来测试父组件的错误边界
-		const {id,name,done} = this.props
+		// const {id,name,done} = this.props
 		const {mouse} = this.state
 		return (
 			

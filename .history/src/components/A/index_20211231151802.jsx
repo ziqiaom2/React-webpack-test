@@ -4,7 +4,9 @@ import React, { useState } from 'react'
 
 export default function A(props) {
   const [name,setName] = useState('A is parent')
-
+  static getDerivedStateFromError(){
+    
+  }
   return (
     <div className='compA'>
       <h3>A组件</h3>

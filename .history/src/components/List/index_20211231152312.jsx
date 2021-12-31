@@ -10,22 +10,14 @@ export default class List extends Component {
     updateTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
   };
-  state={hasError:''}
-  // 如果子组件出错，则进行容灾
-  // 只能捕获后代组件生命周期产生的错误，不能捕获自己组件产生的错误和其他组件在合成事件，定时器中产生的错误
-  static getDerivedStateFromError(error) {
-    console.log("error occurred:", error);
-    return { hasError: error };
-  }
-
-  componentDidCatch() {
-    console.log("此处统计错误，反馈给服务器，用于通知编码人员进行bug的解决");
+  static getDerivedStateFromError(){
+    
   }
   render() {
     const { todos, updateTodo, deleteTodo } = this.props;
     return (
       <ul className="todo-main">
-        {this.state.hasError ? <h2>当前网络不稳定，稍后再试</h2> : todos.map((todo) => {
+        {todos.map((todo) => {
           return (
             <Item
               key={todo.id}
@@ -35,7 +27,6 @@ export default class List extends Component {
             />
           );
         })}
-        
       </ul>
     );
   }

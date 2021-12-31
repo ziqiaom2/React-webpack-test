@@ -7,6 +7,7 @@ export default function A(props) {
 
   return (
     <div className='compA'>
+      <hr />
       <h3>A组件</h3>
       <h4>{name}</h4>
       {props.render(name)}
