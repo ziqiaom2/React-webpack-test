@@ -5,17 +5,17 @@ export default function Hooks() {
   // useState
   const [count, setCount] = useState(0);
   // const [timer,setTimer] = useState(null)
-  let timer =useRef()
+  let timer
   function add() {
     console.log("add is triggered");
     setCount((count) => count + 1);
   }
 
   function pause() {
-    clearInterval(timer.current)
+    clearInterval(timer)
   }
   function autoAdd() {
-    timer.current = setInterval(() => {
+    timer = setInterval(() => {
       add();
     }, 500);
   }

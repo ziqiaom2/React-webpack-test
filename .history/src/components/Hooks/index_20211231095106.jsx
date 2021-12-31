@@ -12,10 +12,10 @@ export default function Hooks() {
   }
 
   function pause() {
-    clearInterval(timer.current)
+    clearInterval(timer)
   }
   function autoAdd() {
-    timer.current = setInterval(() => {
+    timer = setInterval(() => {
       add();
     }, 500);
   }
