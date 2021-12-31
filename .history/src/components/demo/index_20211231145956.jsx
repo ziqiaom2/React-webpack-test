@@ -100,8 +100,7 @@ export default class App extends Component {
             clearAllDone={this.clearAllDone}
           />
           <div className="compABC">
-            {/* <A render={() => <C />} /> */}
-            <A render={(name) => <B name={name}/>} />
+            <A render={() => <C />} />
           </div>
           <hr />
           <div className="myLink">

@@ -51,10 +51,6 @@ body {
 }
 .compB{
   background-color: aquamarine;
-  padding: 0.5rem;
 }
-.compC{
-  background-color: rgb(159, 189, 233);
-  padding: 0.5rem;
+.compABC{
 }
-

@@ -101,7 +101,7 @@ export default class App extends Component {
           />
           <div className="compABC">
             {/* <A render={() => <C />} /> */}
-            <A render={(name) => <B name={name}/>} />
+            <A render={() => <B />} />
           </div>
           <hr />
           <div className="myLink">

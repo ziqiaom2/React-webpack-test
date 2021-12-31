@@ -47,14 +47,10 @@ body {
 
 .compA{
   background-color: #2facbd;
-  padding: 0.5rem;
 }
 .compB{
   background-color: aquamarine;
-  padding: 0.5rem;
 }
-.compC{
-  background-color: rgb(159, 189, 233);
-  padding: 0.5rem;
+.compABC{
+  padding: 8px;
 }
-

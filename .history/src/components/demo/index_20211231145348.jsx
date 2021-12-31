@@ -4,14 +4,14 @@ import Header from "../Header";
 import List from "../List";
 import Footer from "../Footer";
 import Loading from "../Loading";
-import A from "../A";
-import B from "../B";
-import C from "../C";
+import A from '../A'
+import B from '../B'
+import C from '../C'
 
 import { NavLink, Redirect, Route } from "react-router-dom";
 const Count = lazy(() => import("../../containers/Count"));
 const Person = lazy(() => import("../../containers/Person"));
-const Hooks = lazy(() => import("../../components/Hooks"));
+const Hooks = lazy(()=>import('../../components/Hooks'))
 export default class App extends Component {
   //状态在哪里，操作状态的方法就在哪里
 
@@ -99,22 +99,19 @@ export default class App extends Component {
             checkAllTodo={this.checkAllTodo}
             clearAllDone={this.clearAllDone}
           />
-          <div className="compABC">
-            {/* <A render={() => <C />} /> */}
-            <A render={(name) => <B name={name}/>} />
-          </div>
-          <hr />
+					<A render={()=><B/>}/>
+					<hr />
           <div className="myLink">
             <NavLink to="/count">Count</NavLink>
             <NavLink to="/person">Person</NavLink>
             <NavLink to="/hooks">Hooks</NavLink>
-            <Redirect to="/count" />
+						<Redirect to="/count"/>
           </div>
           <div>
             <Suspense fallback={<Loading />}>
               <Route path="/count" component={Count} />
               <Route path="/person" component={Person} />
-              <Route path="/hooks" component={Hooks} />
+							<Route path='/hooks' component={Hooks}/>
             </Suspense>
           </div>
         </div>
