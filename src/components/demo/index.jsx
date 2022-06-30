@@ -11,7 +11,7 @@ import C from "../C";
 import { NavLink, Redirect, Route } from "react-router-dom";
 const Count = lazy(() => import("../../containers/Count"));
 const Person = lazy(() => import("../../containers/Person"));
-const Hooks = lazy(() => import("../../components/Hooks"));
+const Hooks = lazy(() => import("../Hooks"));
 export default class App extends Component {
   //状态在哪里，操作状态的方法就在哪里
 
@@ -104,7 +104,8 @@ export default class App extends Component {
             <A render={(name) => <B name={name}/>} />
           </div>
           <hr />
-          <div className="myLink">
+          {/* 嵌套路由 */}
+          {/* <div className="myLink">
             <NavLink to="/count">Count</NavLink>
             <NavLink to="/person">Person</NavLink>
             <NavLink to="/hooks">Hooks</NavLink>
@@ -116,7 +117,7 @@ export default class App extends Component {
               <Route path="/person" component={Person} />
               <Route path="/hooks" component={Hooks} />
             </Suspense>
-          </div>
+          </div> */}
         </div>
       </div>
     );
