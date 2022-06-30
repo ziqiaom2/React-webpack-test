@@ -1,6 +1,7 @@
 import React, { Component, Fragment, Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import routes from "./router/routes.js";
+import Loading from './components/Loading';
 
 import Demo from './components/demo'
 import './App.css'
@@ -8,7 +9,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<Loading/>}>
 					<Switch>
 						{
 							routes.map((item) => {
