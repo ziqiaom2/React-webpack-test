@@ -3,18 +3,18 @@ import React from "react";
 //引入ReactDOM
 import ReactDOM from "react-dom";
 //引入App
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import App from "./App";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 
 ReactDOM.render(
   // 通过provider直接将所有的store传递给app组件
-  <BrowserRouter>
+  <HashRouter>
     <Provider store={store}>
       <App />
     </Provider>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
 //帮助redux通知组件调用render函数！！！
