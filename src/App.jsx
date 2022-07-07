@@ -3,7 +3,6 @@ import { Route, Switch } from 'react-router-dom'
 import routes from "./router/routes.js";
 import Loading from './components/Loading';
 
-import Demo from './components/demo'
 import './App.css'
 export default class App extends Component {
 	render() {
