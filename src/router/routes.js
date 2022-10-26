@@ -2,6 +2,11 @@ import { lazy } from 'react';
 
 const routes =[
   {
+    path: '/',
+    component: lazy(() => import('../pages/index/index')),
+    exact: true,
+  },
+  {
     path: '/my',
     component: lazy(() => import('../pages/my/index')),
     exact: true,
