@@ -25,6 +25,11 @@ const routes =[
     path: '/usestate-test',
     component: lazy(() => import('../pages/usestate-test')),
     exact: true,
+  },
+  {
+    path: '/ws-test',
+    component: lazy(() => import('../pages/ws-test')),
+    exact: true,
   }
 ]
 
