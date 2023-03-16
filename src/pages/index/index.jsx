@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import { useState, useEffect } from 'react'
 
 export default function index() {
   const [a, setA] = useState(() => 'aaa');
+  let _ref = useRef();
   // componentDidMount
   useEffect(() => {
     // Update the document title using the browser API
@@ -49,6 +50,13 @@ export default function index() {
     }, 0);
   }
   return (
-    <div>{a}</div>
+      <>
+        <div style={{background : 'gold', height : '140px'}}>{a}</div>
+        {/*可以通过 _ref.scrollIntoView() 使得_ref元素移动到可视区域顶部*/}
+        <div ref={(e) => {_ref = e}} style={{background : 'red', height : '180px'}}>-----</div>
+        <div style={{background : 'grey', height : '140px'}} onClick={() => _ref.scrollIntoView()}>11111</div>
+        <div style={{height : '100vh'}}>11111</div>
+        <div>toTop</div>
+      </>
   )
 }
